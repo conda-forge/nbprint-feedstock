@@ -40,9 +40,9 @@ test:
   imports:
     - nbprint
   requires:
-     - pip
-   commands:
-     - pip check
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://github.com/timkpaine/nbprint
