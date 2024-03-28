@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: df2e6d289be3a8f2e5f27d52c0afdd3d8bb31db1a64574eea915139072ab7016
+  sha256: 4f6cc4520bd1da14beb9382d4ee5455f7c1203f4976f8b6569b77a94c3fcb554
 
 build:
   number: 0
@@ -28,14 +28,21 @@ requirements:
     - dominate
     - ipywidgets
     - ipython
+    - nbconvert
     - nbformat
     - notebook
     - omegaconf
-    - pydantic
+    - pydantic >=2,<3
+    - pydantic-extra-types
+    - typer
 
 test:
   imports:
     - nbprint
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://github.com/timkpaine/nbprint
