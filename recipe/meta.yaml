@@ -28,14 +28,21 @@ requirements:
     - dominate
     - ipywidgets
     - ipython
+    - nbconvert
     - nbformat
     - notebook
     - omegaconf
-    - pydantic
+    - pydantic >=2,<3
+    - pydantic-extra-types
+    - typer
 
 test:
   imports:
     - nbprint
+  requires:
+     - pip
+   commands:
+     - pip check
 
 about:
   home: http://github.com/timkpaine/nbprint
