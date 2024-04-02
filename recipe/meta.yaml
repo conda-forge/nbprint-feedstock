@@ -28,12 +28,13 @@ requirements:
     - dominate
     - ipywidgets
     - ipython
-    - nbconvert
+    - nbconvert >=7.11.0
     - nbformat
     - notebook
     - omegaconf
     - pydantic >=2,<3
     - pydantic-extra-types
+    - strenum
     - typer
 
 test:
