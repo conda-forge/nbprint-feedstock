@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.1.10" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0c0274bf83ca53d285d4832ad2054d4041cdb1d1359dc0eb0a9b0f0cfd5152de
+  sha256: 61dd9924f63da5e3611f939e5ef83d321fb36c8b5d9e54ec8c7ca08f204e37c8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - hydra-core
     - ipywidgets
     - ipython
-    - nbconvert >=7.11.0
+    - nbconvert-webpdf >=7.11.0
     - nbformat
     - notebook
     - omegaconf
