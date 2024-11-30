@@ -27,6 +27,7 @@ requirements:
     - jupyterlab >=4,<5
   run:
     - python >={{ python_min }}
+    - ccflow >=0.4.0
     - dominate
     - hydra-core
     - ipywidgets
