@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 887e565c25ab47babf0dc0979a2efcff34ac917128d2d01531ec909e4ab54900
+  sha256: 988e1349c57f7af10455bbac9b4d36eeade13929b32d2b69d6df89f0885530f4
 
 build:
   number: 0
