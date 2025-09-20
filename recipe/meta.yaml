@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 988e1349c57f7af10455bbac9b4d36eeade13929b32d2b69d6df89f0885530f4
+  sha256: c8fab28071cafcabde120ff8715c88d6b37ed55e555673f2b4e390526c56e377
 
 build:
   number: 0
@@ -21,17 +21,16 @@ requirements:
     - python {{ python_min }}
     - pip
     - nodejs
-    - yarn
+    - pnpm
     - hatchling >=1.3.1
-    - hatch-jupyter-builder
-    - jupyterlab >=4,<5
+    - hatch-js
   run:
     - python >={{ python_min }}
     - ccflow >=0.4.0
     - dominate
     - hydra-core
     - ipywidgets
-    - ipython
+    - lerna >=1.1.0
     - nbconvert-webpdf >=7.11.0
     - nbformat
     - notebook
@@ -40,6 +39,7 @@ requirements:
     - pydantic-extra-types
     - strenum
     - typer
+    - typing-extensions
 
 test:
   imports:
