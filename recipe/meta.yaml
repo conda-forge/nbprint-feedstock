@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.8.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d704a17ec3c1d3e15d910bdbdfd8d5b305b8f8ae1bd4fe13cad1e4a83796e353
+  sha256: 533efc3d43c76880c6612ae3924b26764d2330e05d9860223c0d3be5e499ef8a
 
 build:
   number: 0
@@ -28,8 +28,10 @@ requirements:
     - python >={{ python_min }}
     - ccflow >=0.4.0
     - dominate
+    - emails
     - hydra-core
     - ipywidgets
+    - jinja2
     - lerna >=1.1.0
     - nbconvert-webpdf >=7.11.0
     - nbformat
