@@ -28,8 +28,10 @@ requirements:
     - python >={{ python_min }}
     - ccflow >=0.4.0
     - dominate
+    - emails
     - hydra-core
     - ipywidgets
+    - jinja2
     - lerna >=1.1.0
     - nbconvert-webpdf >=7.11.0
     - nbformat
