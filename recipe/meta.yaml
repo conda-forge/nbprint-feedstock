@@ -37,6 +37,7 @@ requirements:
     - nbformat
     - notebook
     - omegaconf
+    - pkn
     - pydantic >=2,<3
     - pydantic-extra-types
     - strenum
