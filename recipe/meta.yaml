@@ -28,7 +28,7 @@ requirements:
     - python >={{ python_min }}
     - ccflow >=0.4.0
     - dominate
-    - emails
+    - emails <1
     - hydra-core
     - ipywidgets
     - jinja2
