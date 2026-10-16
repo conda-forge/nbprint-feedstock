@@ -1,5 +1,5 @@
 {% set name = "nbprint" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fbfa0914dedc1f2268f4c024a8efe095bec3465e74a814a4d90bbe91caa1a539
+  sha256: a3430b82afbd205f02050844901d7b34f1d724e69c1d49451db64c8ed4dbfe69
 
 build:
   number: 0
