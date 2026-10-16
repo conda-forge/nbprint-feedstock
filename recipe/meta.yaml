@@ -15,6 +15,8 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - nbprint = nbprint.cli:main
+    - nbprint-cc = nbprint.cli:hydra
+    - nbprint-cc-explain = nbprint.cli:hydra_explain
 
 requirements:
   host:
@@ -26,9 +28,9 @@ requirements:
     - hatch-js
   run:
     - python >={{ python_min }}
-    - ccflow >=0.4.0
+    - ccflow >=0.9.0
     - dominate
-    - emails <1
+    - emails <2
     - hydra-core
     - ipywidgets
     - jinja2
@@ -52,6 +54,9 @@ test:
     - pip
   commands:
     - pip check
+    - nbprint --help
+    - nbprint-cc --help
+    - nbprint-cc-explain --help
 
 about:
   home: http://github.com/timkpaine/nbprint
